@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Scanner;
 
 class student1 implements Serializable {
 
@@ -10,9 +11,20 @@ public static void main(String[] args) {
 
     //Serializarion
     student1 student = new student1();
-   student.studentName="Afrah Ali";
-   student.studentAddress="Muscat, Amirat";
-   student.studentId=123;
+//   student.studentName="Afrah Ali";
+//   student.studentAddress="Muscat, Amirat";
+//   student.studentId=123;
+
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter Student Name");
+    student.studentName = sc.nextLine();
+
+    System.out.println("Enter Student Address");
+    student.studentAddress = sc.nextLine();
+
+    System.out.println("Enter Student ID");
+    student.studentId = sc.nextInt();
+
 
    try{
        FileOutputStream file = new FileOutputStream("student.txt");
