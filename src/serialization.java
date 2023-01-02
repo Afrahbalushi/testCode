@@ -10,15 +10,15 @@ public static void main(String[] args) {
 
     //Serializarion
     student1 student = new student1();
-   student.studentName="Afrah";
-   student.studentAddress="Muscat";
+   student.studentName="Afrah Ali";
+   student.studentAddress="Muscat, Amirat";
    student.studentId=123;
 
    try{
        FileOutputStream file = new FileOutputStream("student.txt");
-       ObjectOutputStream object = new ObjectOutputStream(file);
-       object.writeObject(student);
-       object.close();
+       ObjectOutputStream out = new ObjectOutputStream(file);
+       out.writeObject(student);
+       out.close();
        file.close();
        System.out.println("serialized and saved");
 
